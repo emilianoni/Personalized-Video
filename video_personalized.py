@@ -174,7 +174,7 @@ if st.sidebar.button("Generate Video"):
                 """,
                 unsafe_allow_html=True
             )
-            output_path = f"./output_video_{cif_input}.mp4"  # Use CIF to name the output file
+            output_path = f"./output/output_video_{cif_input}.mp4"  # Use CIF to name the output file
             st.write(f"Output path: {os.path.abspath(output_path)}")
             position = (width // 2, height // 4) if width and height and width < height else (100, 100)
             
@@ -212,7 +212,7 @@ if st.sidebar.button("Generate Video"):
                 )
 
                 # Convert video if necessary, it's really necessary fr
-                converted_path = f"./converted_video_{cif_input}.mp4"
+                converted_path = f"./output/converted_video_{cif_input}.mp4"
                 if convert_video_to_mp4(output_path, converted_path):
                     st.video(data=converted_path, format="video/mp4", start_time=0)
 
