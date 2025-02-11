@@ -3,7 +3,7 @@ import json
 import subprocess
 import streamlit as st
 from get_data import load_data, get_unique_subheaders
-from text_generated import get_response_text, get_response_category
+from text_generated import get_response_text
 from video_generated import add_text
 from video_generated import initialize_video
 from video_generated import release_resources
@@ -92,6 +92,7 @@ if st.sidebar.button("Generate Video"):
             if not subheader_values:
                 st.error("No matching data found for the given CIF.")
                 st.stop()
+            st.write('list merchant:', subheader_values)
 
             st.markdown(
                 f"""
@@ -111,9 +112,8 @@ if st.sidebar.button("Generate Video"):
                 """,
                 unsafe_allow_html=True
             )
-            generated_text = get_response_text(subheader_values)
+            category, generated_text = get_response_text(subheader_values)
 
-            category = get_response_category(generated_text)
             st.write('Category:', category)
 
             if category == 'makanan & minuman':
