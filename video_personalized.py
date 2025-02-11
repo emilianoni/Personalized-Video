@@ -8,13 +8,6 @@ from video_generated import add_text
 from video_generated import initialize_video
 from video_generated import release_resources
 
-# Load config.json
-with open("config.json") as config_file:
-    config = json.load(config_file)
-
-# Access the API key
-api_key = config["api_key"]
-
 def hex_to_bgr(hex_color):
     """
     Convert a hex color code (e.g., #FFFFFF) to a BGR tuple for OpenCV.
@@ -77,7 +70,7 @@ text_duration = st.sidebar.slider("Text Duration (seconds)", min_value=1, max_va
 
 
 if st.sidebar.button("Generate Video"):
-    if not (uploaded_file and api_key and cif_input): 
+    if not (uploaded_file and cif_input): 
         st.error("Please provide all required inputs!")
     else:
         try:

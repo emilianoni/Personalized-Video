@@ -1,7 +1,12 @@
+import json
 from groq import Groq
 
-# Initialize the Groq client with your API key
-api_key = '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'
+# Load config.json
+with open("config.json") as config_file:
+    config = json.load(config_file)
+
+# Access the API key
+api_key = config["api_key"]
 client = Groq(api_key=api_key)
 
 # Define the prompt template
