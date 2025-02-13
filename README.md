@@ -5,9 +5,13 @@
 
 #### 1. Clone the repository
 
+````
+```
 git clone https://github.com/muthiaap/Personalized-Video.git
 
 cd Personalized-Video
+```
+````
 
 #### 2. Create a virtual environment
 
