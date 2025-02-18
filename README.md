@@ -1,4 +1,16 @@
 # Personalized Video
+
+````
+Video Personalized is a project that enables automatic video generation based on financial transactions. Simply input your Groq API key, upload a video, and provide a data frame in Excel format containing transaction details. The AI-powered system will then generate personalized text overlays that reflect the transaction data, seamlessly embedding contextual messages into the video.
+
+Features:
+AI-Generated Text: Automatically creates personalized captions based on financial transactions.
+Excel Data Input: Upload an Excel file containing transaction data for seamless processing.
+Easy Integration: Just input your API key, upload a video, and provide the data frame.
+Dynamic Customization: Generates tailored messages that enhance user engagement.
+Ideal for financial institutions, marketing campaigns, and personalized content creation.
+````
+
 ## Setup Guide
 
 ### Follow these steps to set up and run the project:
